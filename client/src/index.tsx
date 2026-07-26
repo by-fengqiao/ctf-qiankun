@@ -7,8 +7,10 @@ import RoutesComponent from './app';
 import './index.css';
 import { Toaster } from '@/components/ui/sonner';
 
+const basename = import.meta.env.BASE_URL;
+
 const MainApp = () => (
-  <BrowserRouter>
+  <BrowserRouter basename={basename}>
     <ErrorBoundary fallbackRender={({ error }) => <div className="p-8 text-destructive">应用发生错误：{String(error)}</div>}>
       <RoutesComponent />
       {createPortal(<Toaster />, document.body)}
