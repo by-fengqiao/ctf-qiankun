@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true, "esModuleInterop": true, "allowSyntheticDefaultImports": true,
+    "strict": false, "forceConsistentCasingInFileNames": true,
+    "module": "ESNext", "moduleResolution": "Bundler", "resolveJsonModule": true,
+    "isolatedModules": true, "noEmit": true, "jsx": "react-jsx", "baseUrl": ".",
+    "paths": { "@/*": ["client/src/*"], "@client/*": ["client/*"], "@shared/*": ["shared/*"] }
+  },
+  "include": [
+    "client/src/index.tsx", "client/src/app.tsx", "client/src/vite-env.d.ts",
+    "client/src/pages/WorkbenchPage/**/*.tsx",
+    "client/src/pages/NotFound/NotFound.tsx",
+    "client/src/components/ui/**/*.tsx",
+    "client/src/components/workbench/**/*.tsx",
+    "client/src/hooks/useOperationChain.ts", "client/src/hooks/useSmartCodec.ts",
+    "client/src/lib/**/*.ts", "client/src/store/workbench-store.ts",
+    "client/src/tools/**/*.ts", "client/src/tools/**/*.tsx"
+  ],
+  "exclude": ["node_modules", "dist", "client/src/components/workbench/AIAssistant"]
+}
